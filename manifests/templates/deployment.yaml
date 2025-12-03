@@ -1,0 +1,25 @@
+---
+# Source: helm for kubernetes/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nakfake-11b8ba4e
+  labels:
+    app: nakfake-11b8ba4e
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: nakfake-11b8ba4e
+  template:
+    metadata:
+      labels:
+        app: nakfake-11b8ba4e
+    spec:
+      containers:
+        - name: nakfake-11b8ba4e
+          image: docker.io/phengbunath/nakfake-11b8ba4e:1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
