@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: nakfake-11b8ba4e
-          image: docker.io/phengbunath/nakfake-11b8ba4e:1
+          image: docker.io/phengbunath/nakfake-11b8ba4e:2
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
