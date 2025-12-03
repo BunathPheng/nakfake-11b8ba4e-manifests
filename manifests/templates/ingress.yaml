@@ -1,0 +1,21 @@
+---
+# Source: helm for kubernetes/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nakfake-11b8ba4e                  # Ingress name
+  labels:
+    app: nakfake-11b8ba4e
+spec:
+  ingressClassName: nginx   # Optional ingressClass
+  rules:
+    - host: "nakfake-11b8ba4e.smartops.space"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: nakfake-11b8ba4e               # Links to Service name dynamically
+                port:
+                  number: 8080  # Links to service port dynamically
